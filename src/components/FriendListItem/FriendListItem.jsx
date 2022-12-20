@@ -1,4 +1,5 @@
 import s from './FriendListItem.module.css';
+import PropTypes from 'prop-types';
 import { BsFillCircleFill } from 'react-icons/bs';
 
 export const FriendListItem = ({ avatar, name, isOnline }) => {
@@ -16,4 +17,10 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
       <p className={s.name}>{name}</p>
     </li>
   );
+};
+
+FriendListItem.propTypes = {
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
